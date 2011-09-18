@@ -4,6 +4,7 @@
   Bootstrap's documentation styles
   Special styles for presenting Bootstrap's documentation and examples
 */
+
 /* Body and structure
 -------------------------------------------------- */
 body {
@@ -12,10 +13,14 @@ body {
 }
 section {
   padding-top: 60px;
+<<<<<<< HEAD:assets/css/docs.css
 }
 section > .row {
   margin-bottom: 10px;
+=======
+>>>>>>> upstream/master:docs/assets/css/docs.css
 }
+<<<<<<< HEAD:assets/css/docs.css
 #masthead, #footer {
   background-color: #049cd9;
   background-repeat: no-repeat;
@@ -25,10 +30,23 @@ section > .row {
   background-image: -o-linear-gradient(top, #004D9F, #049cd9);
   background-image: -khtml-gradient(linear, left top, left bottom, from(#004D9F), to(#049cd9));
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#004D9F', endColorstr='#049cd9', GradientType=0); /* IE8 and down */
+=======
+section > .row {
+  margin-bottom: 10px;
 }
-#masthead div.inner, #footer div.inner {
+
+
+/* Jumbotrons
+-------------------------------------------------- */
+.jumbotron {
+  min-width: 940px;
+  padding-top: 40px;
+>>>>>>> upstream/master:docs/assets/css/docs.css
+}
+.jumbotron .inner {
   background: transparent url(../img/grid-18px.png) top center;
   padding: 45px 0;
+<<<<<<< HEAD:assets/css/docs.css
   -webkit-box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3);
      -moz-box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -42,31 +60,95 @@ section > .row {
 }
 #masthead p a,
 #footer p a {
-  color: #fff;
-  font-weight: bold;
-}
-#masthead {
-  margin-top: 40px;
-}
-#masthead h1,
-#masthead p {
-  text-align: center;
+=======
+  -webkit-box-shadow: inset 0 10px 30px rgba(0,0,0,.3);
+     -moz-box-shadow: inset 0 10px 30px rgba(0,0,0,.3);
+/*          box-shadow: inset 0 10px 30px rgba(0,0,0,.3);
+*/}
+.jumbotron h1,
+.jumbotron p {
   margin-bottom: 9px;
+>>>>>>> upstream/master:docs/assets/css/docs.css
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
 }
-#masthead h1 {
+.jumbotron h1 {
   font-size: 54px;
   line-height: 1;
   text-shadow: 0 1px 2px rgba(0,0,0,.5);
 }
-#masthead p {
+.jumbotron p {
   font-weight: 300;
 }
-#masthead p.lead {
+.jumbotron .lead {
   font-size: 20px;
   line-height: 27px;
 }
+.jumbotron p a {
+  color: #fff;
+  font-weight: bold;
+}
 
-div.quickstart {
+/* Specific jumbotrons
+------------------------- */
+/* main docs page */
+.masthead {
+  background-color: #049cd9;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#004D9F), to(#049cd9));
+  background-image: -webkit-linear-gradient(#004D9F, #049cd9);
+  background-image: -moz-linear-gradient(#004D9F, #049cd9);
+  background-image: -o-linear-gradient(top, #004D9F, #049cd9);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#004D9F), to(#049cd9));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#004D9F', endColorstr='#049cd9', GradientType=0); /* IE8 and down */
+}
+/* supporting docs pages */
+.subhead {
+  background-color: #767d80;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#565d60), to(#767d80));
+  background-image: -webkit-linear-gradient(#565d60, #767d80);
+  background-image: -moz-linear-gradient(#565d60, #767d80);
+  background-image: -o-linear-gradient(top, #565d60, #767d80);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#565d60), to(#767d80));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#565d60', endColorstr='#767d80', GradientType=0); /* IE8 and down */
+}
+.subhead .inner {
+  padding: 36px 0 27px;
+}
+.subhead h1,
+.subhead p {
+  text-align: left;
+}
+.subhead h1 {
+  font-size: 40px;
+}
+.subhead p a {
+  font-weight: normal;
+}
+
+
+/* Footer
+-------------------------------------------------- */
+.footer {
+  background-color: #eee;
+  min-width: 940px;
+  padding: 30px 0;
+  text-shadow: 0 1px 0 #fff;
+  border-top: 1px solid #e5e5e5;
+  -webkit-box-shadow: inset 0 5px 15px rgba(0,0,0,.025);
+     -moz-box-shadow: inset 0 5px 15px rgba(0,0,0,.025);
+/*          box-shadow: inset 0 5px 15px rgba(0,0,0,.025);
+*/}
+.footer p {
+  color: #555;
+}
+
+
+/* Quickstart section for getting le code
+-------------------------------------------------- */
+.quickstart {
   background-color: #f5f5f5;
   background-repeat: repeat-x;
   background-image: -khtml-gradient(linear, left top, left bottom, from(#f9f9f9), to(#f5f5f5));
@@ -81,13 +163,16 @@ div.quickstart {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #eee;
 }
-div.quickstart div.row {
+.quickstart .container {
+  margin-bottom: 0;
+}
+.quickstart .row {
   margin: 0 -20px;
   -webkit-box-shadow: 1px 0 0 #f9f9f9;
      -moz-box-shadow: 1px 0 0 #f9f9f9;
           box-shadow: 1px 0 0 #f9f9f9;
 }
-div.quickstart div.columns {
+.quickstart [class*="span"] {
   width: 285px;
   height: 117px;
   margin-left: 0;
@@ -97,21 +182,25 @@ div.quickstart div.columns {
      -moz-box-shadow: inset 1px 0 0 #f9f9f9;
           box-shadow: inset 1px 0 0 #f9f9f9;
 }
-div.quickstart div.columns:last-child {
+.quickstart [class*="span"]:last-child {
   border-right: 1px solid #eee;
   width: 286px;
 }
-div.quickstart h6,
-div.quickstart p {
+.quickstart h6,
+.quickstart p {
   line-height: 18px;
   text-align: center;
   margin-bottom: 9px;
   color: #333;
 }
-div.quickstart h6 {
+.quickstart .current-version,
+.quickstart .current-version a {
   color: #999;
 }
-div.quickstart form textarea {
+.quickstart h6 {
+  color: #999;
+}
+.quickstart textarea {
   display: block;
   width: 275px;
   height: auto;
@@ -120,40 +209,68 @@ div.quickstart form textarea {
   white-space: nowrap;
   overflow: hidden;
 }
-#footer {
-  margin-top: 80px;
-}
-#footer p {
-  margin-bottom: 0;
-  color: rgba(255,255,255,.8)
-}
-#footer p.right {
-  float: right;
-}
+
+
 /* Special grid styles
 -------------------------------------------------- */
 .show-grid {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+<<<<<<< HEAD:assets/css/docs.css
 .show-grid .column, .show-grid .columns {
   background-color: #eee;
+=======
+.show-grid [class*="span"] {
+  background: #eee;
+>>>>>>> upstream/master:docs/assets/css/docs.css
   text-align: center;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
+<<<<<<< HEAD:assets/css/docs.css
   height: 30px;
+=======
+  min-height: 30px;
+>>>>>>> upstream/master:docs/assets/css/docs.css
   line-height: 30px;
 }
+<<<<<<< HEAD:assets/css/docs.css
 .show-grid:hover .column, .show-grid:hover .columns {
   background: rgba(0, 0, 0, 0.25);
+=======
+.show-grid:hover [class*="span"] {
+  background: #ddd;
+>>>>>>> upstream/master:docs/assets/css/docs.css
 }
+<<<<<<< HEAD:assets/css/docs.css
+=======
+.show-grid .show-grid {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.show-grid .show-grid [class*="span"] {
+  background-color: #ccc;
+}
+
+
+>>>>>>> upstream/master:docs/assets/css/docs.css
 /* Render mini layout previews
 -------------------------------------------------- */
-div.mini-layout {
-  height: 340px;
+.mini-layout {
+  border: 1px solid #ddd;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.075);
+          box-shadow: 0 1px 2px rgba(0,0,0,.075);
+}
+.mini-layout {
+  height: 240px;
   margin-bottom: 20px;
   padding: 9px;
+<<<<<<< HEAD:assets/css/docs.css
   border: 1px solid #ccc;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
@@ -161,44 +278,78 @@ div.mini-layout {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
      -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
+=======
+>>>>>>> upstream/master:docs/assets/css/docs.css
 }
+<<<<<<< HEAD:assets/css/docs.css
 div.mini-layout div {
+=======
+.mini-layout div {
+>>>>>>> upstream/master:docs/assets/css/docs.css
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
 }
+<<<<<<< HEAD:assets/css/docs.css
 div.mini-layout div.mini-layout-body {
+=======
+.mini-layout .mini-layout-body {
+>>>>>>> upstream/master:docs/assets/css/docs.css
   background-color: #dceaf4;
   margin: 0 auto;
+<<<<<<< HEAD:assets/css/docs.css
   width: 340px;
   height: 340px;
+=======
+  width: 240px;
+  height: 240px;
+>>>>>>> upstream/master:docs/assets/css/docs.css
 }
+<<<<<<< HEAD:assets/css/docs.css
 div.mini-layout.fluid div.mini-layout-sidebar,
 div.mini-layout.fluid div.mini-layout-header,
 div.mini-layout.fluid div.mini-layout-body {
+=======
+.mini-layout.fluid .mini-layout-sidebar,
+.mini-layout.fluid .mini-layout-header,
+.mini-layout.fluid .mini-layout-body {
+>>>>>>> upstream/master:docs/assets/css/docs.css
   float: left;
 }
+<<<<<<< HEAD:assets/css/docs.css
 div.mini-layout.fluid div.mini-layout-sidebar {
+=======
+.mini-layout.fluid .mini-layout-sidebar {
+>>>>>>> upstream/master:docs/assets/css/docs.css
   background-color: #bbd8e9;
   width: 90px;
-  height: 340px;
+  height: 240px;
 }
+<<<<<<< HEAD:assets/css/docs.css
 div.mini-layout.fluid div.mini-layout-body {
+=======
+.mini-layout.fluid .mini-layout-body {
+>>>>>>> upstream/master:docs/assets/css/docs.css
   width: 300px;
   margin-left: 10px;
 }
+
+
 /* Topbar special styles
 -------------------------------------------------- */
-div.topbar-wrapper {
+.topbar-wrapper {
   position: relative;
   height: 40px;
   margin: 5px 0 15px;
 }
-div.topbar-wrapper div.topbar {
+.topbar-wrapper .topbar {
   position: absolute;
   margin: 0 -20px;
 }
+<<<<<<< HEAD:assets/css/docs.css
 div.topbar-wrapper div.topbar .topbar-inner {
+=======
+.topbar-wrapper .topbar .topbar-inner {
   padding-left: 20px;
   padding-right: 20px;
   -webkit-border-radius: 4px;
@@ -206,28 +357,46 @@ div.topbar-wrapper div.topbar .topbar-inner {
           border-radius: 4px;
 }
 
+/* Topbar in js docs
+------------------------- */
+#bootstrap-js .topbar-wrapper {
+  z-index: 1;
+}
+#bootstrap-js .topbar-wrapper .topbar {
+  position: absolute;
+  margin: 0 -20px;
+}
+#bootstrap-js .topbar-wrapper .topbar .topbar-inner {
+>>>>>>> upstream/master:docs/assets/css/docs.css
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+#bootstrap-js .topbar-wrapper .container {
+  width: auto;
+}
+
+
 /* Popover docs
 -------------------------------------------------- */
-div.popover-well {
+.popover-well {
   min-height: 160px;
 }
-
-div.popover-well div.popover {
+.popover-well .popover {
   display: block;
 }
-
-div.popover-well div.popover-wrapper {
+.popover-well .popover-wrapper {
   width: 50%;
   height: 160px;
   float: left;
   margin-left: 55px;
   position: relative;
 }
-
-div.popover-well div.popover-menu-wrapper {
+.popover-well .popover-menu-wrapper {
   height: 80px;
 }
-
 img.large-bird {
   margin: 5px 0 0 310px;
   opacity: .1;
@@ -235,6 +404,10 @@ img.large-bird {
 
 /* Pretty Print
 -------------------------------------------------- */
+<<<<<<< HEAD:assets/css/docs.css
 PRE.prettyprint {
+=======
+pre.prettyprint {
+>>>>>>> upstream/master:docs/assets/css/docs.css
   overflow: hidden;
 }

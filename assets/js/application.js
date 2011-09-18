@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+<<<<<<< HEAD:assets/js/application.js
   // Google code prettify
   // ====================
 
@@ -56,39 +57,51 @@ $(document).ready(function(){
   });
 
 
+=======
+>>>>>>> upstream/master:docs/assets/js/application.js
   // table sort example
   // ==================
 
-  $("#sortTableExample").tablesorter( {sortList: [[1,0]]} );
+  $("#sortTableExample").tablesorter( { sortList: [[ 1, 0 ]] } )
 
 
   // add on logic
   // ============
 
-  $('.add-on :checkbox').click(function() {
+  $('.add-on :checkbox').click(function () {
     if ($(this).attr('checked')) {
-      $(this).parents('.add-on').addClass('active');
+      $(this).parents('.add-on').addClass('active')
     } else {
-      $(this).parents('.add-on').removeClass('active');
+      $(this).parents('.add-on').removeClass('active')
     }
-  });
+  })
 
 
   // Disable certain links in docs
   // =============================
+  // Please do not carry these styles over to your projects, it's merely here to prevent button clicks form taking you away from your spot on page
 
-  $('ul.tabs a, ul.pills a, .pagination a, .well .btn, .actions .btn, .alert-message .btn, a.close').click(function(e) {
-    e.preventDefault();
-  });
+  $('ul.tabs a, ul.pills a, .pagination a, .well .btn, .actions .btn, .alert-message .btn, a.close').click(function (e) {
+    e.preventDefault()
+  })
 
   // Copy code blocks in docs
+<<<<<<< HEAD:assets/js/application.js
   $(".copy-code").focus(function() {
+=======
+  $(".copy-code").focus(function () {
+>>>>>>> upstream/master:docs/assets/js/application.js
     var el = this;
     // push select to event loop for chrome :{o
+<<<<<<< HEAD:assets/js/application.js
     setTimeout(function () { $(el).select(); }, 1);
+=======
+    setTimeout(function () { $(el).select(); }, 0);
+>>>>>>> upstream/master:docs/assets/js/application.js
   });
 
 
+<<<<<<< HEAD:assets/js/application.js
   // POSITION TWIPSIES
   // =================
 
@@ -131,4 +144,21 @@ $(document).ready(function(){
 
   });
 
+=======
+  // POSITION STATIC TWIPSIES
+  // ========================
+
+  $(window).bind( 'load resize', function () {
+    $(".twipsies a").each(function () {
+       $(this)
+        .twipsy({
+          live: false
+        , placement: $(this).attr('title')
+        , trigger: 'manual'
+        , offset: 2
+        })
+        .twipsy('show')
+      })
+  })
+>>>>>>> upstream/master:docs/assets/js/application.js
 });
